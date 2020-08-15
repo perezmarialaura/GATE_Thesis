@@ -2,6 +2,7 @@
 GATE, Python and ROOT scripts for simulations and analysis in MSc thesis. All GATE scripts include macro files that describe the detector (using the CT framework), readout, source, verbosity, visualisation and extra geometry, unified in the main macro file. The output folder includes the necessary ROOT/Python scripts to analyse the data (e.g. main ROOT detector output, phase space actor ROOT output, dose actor mhd files).
 
 There are 5 simulations performed:
+
 1- Am241:  Consists of an Am241 gamma point source (with known discrete gamma energies only) and the detector placed at an SDD of 54 cm. The files there include the implemented input spectrum. Output folder includes .C file that extracts ROOT data to txt, the experimental spectrum, and a .py file to plot.
 
 2- NeutronDetection: Consists of a monoenergetic neutron point source, the Gd filter and the detector. Simulates neutron detection in CdTe in presence and absence of a Gd2O3 filter as a converting material, and the physical processes taking place at different energies. Neutron energies implemented can be changed to 100 eV, 1 keV, 10 keV, 100 keV, 1 MeV, 10 MeV and 100 MeV. Main F and NF files correspond to filtered and not filtered detector. Output folder includes .C file to extract ROOT data to txt. analyse_energies.py needs data from ROOT main output whereas particles and processes Python scripts need the txt output from get_particles and get_processes.C.
