@@ -1,0 +1,90 @@
+#########################
+# SET MATERIAL DATABASE #
+#########################
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#############
+# VERBOSITY #
+#############
+/control/execute verbose.mac
+
+#########
+# WORLD #
+#########
+/gate/world/geometry/setXLength 120. cm
+/gate/world/geometry/setYLength 120. cm
+/gate/world/geometry/setZLength 120. cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible false
+
+#######################################
+# GEOMETRY                            #
+#######################################
+
+/control/execute detector.mac
+#/control/execute medium.mac
+#/control/execute filter.mac
+
+
+###########
+# PHYSICS #
+###########
+/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
+
+/gate/physics/Gamma/SetCutInRegion      world 1 mm
+/gate/physics/Electron/SetCutInRegion   world 1 mm
+/gate/physics/Positron/SetCutInRegion   world 1 mm
+
+/gate/physics/Gamma/SetCutInRegion      CTscanner 0.01 cm
+/gate/physics/Electron/SetCutInRegion   CTscanner 0.01 cm
+/gate/physics/Positron/SetCutInRegion   CTscanner 0.01 cm
+
+/gate/physics/displayCuts
+
+#############
+# DIGITIZER #
+#############
+/control/execute digitizer.mac
+
+##################
+# INITIALIZATION #
+##################
+/gate/run/initialize
+
+##############
+# SOURCE GPS #
+##############
+/control/execute source_am241.mac
+
+############################
+# VISUALIZATION PARAMETERS #
+############################
+#/control/execute visu.mac
+/vis/disable
+
+##########
+# OUTPUT #
+##########
+/gate/output/root/enable
+/gate/output/root/setFileName Am241
+/gate/output/root/setRootHitFlag            1
+/gate/output/root/setRootSinglesFlag        1
+/gate/output/root/setRootNtupleFlag         0
+
+##########
+# RANDOM #
+##########
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+###############
+# ACQUISITION #
+###############
+#/gate/application/setTimeSlice  1 s
+#/gate/application/setTimeStart   0 s
+#/gate/application/setTimeStop    5 s
+/gate/application/setTotalNumberOfPrimaries 100000000
+/gate/application/startDAQ
+
+exit
+

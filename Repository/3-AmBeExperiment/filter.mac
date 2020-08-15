@@ -1,0 +1,10 @@
+/gate/world/daughters/name filter
+/gate/world/daughters/insert box
+/gate/filter/placement/setTranslation 0. 0. 53 cm
+/gate/filter/geometry/setXLength 20. mm
+/gate/filter/geometry/setYLength 20. mm
+/gate/filter/geometry/setZLength 0.5 mm
+/gate/filter/setMaterial Gd2O3
+/gate/filter/vis/forceSolid
+/gate/filter/vis/setColor yellow
+

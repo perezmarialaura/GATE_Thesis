@@ -1,0 +1,28 @@
+/gate/source/addSource protongun PencilBeam
+/gate/source/verbose 0
+/gate/source/protongun/setParticleType proton
+/gate/source/protongun/setEnergy 100 MeV
+/gate/source/protongun/setSigmaEnergy 1 MeV
+/gate/source/protongun/setPosition 0 0 0 cm
+
+# The pencil beam shape is Gaussian. The spot size can is defined by the standard deviation of the normal probability density function in x and y directions. The beam default direction being +z
+
+/gate/source/protongun/setSigmaX 2 mm
+/gate/source/protongun/setSigmaY 2 mm
+
+# The beam is also characterized by its divergences: Theta in the XoZ plan and Phi in the YoZ plan. The beam divergence is defined by the standard deviation of the normal probability density function
+
+/gate/source/protongun/setSigmaTheta 3.3 mrad
+/gate/source/protongun/setSigmaPhi 3.8 mrad
+
+# The correlation between spot size and divergence (in the two plans) is characterized by the beam emittance. The beam emittance is defined by the standard deviation of the normal probability density function. The Emittance of the beam has to be lower (or equal) than the ellipse phase space area: [Emittance_X_Theta] <= Pi* [divergence_Theta] * [spot_size_X] and [Emittance_Y_Phi] <= Pi* [divergence_Phi] * [spot_size_Y].
+
+/gate/source/protongun/setEllipseXThetaEmittance 15 mm*mrad
+/gate/source/protongun/setEllipseYPhiEmittance 20 mm*mrad
+
+# When defining the beam parameters, one can define the beam convergence or divergence in the two plans (XoZ and YoZ), by setting the “RotationNorm” either to “positive” for a convergent beam or to “negative” for a divergent beam
+
+/gate/source/protongun/setEllipseXThetaRotationNorm negative
+/gate/source/protongun/setEllipseYPhiRotationNorm negative
+
+

@@ -1,0 +1,13 @@
+/gate/source/addSource ambe
+/gate/source/verbose 0
+/gate/source/ambe/gps/particle neutron
+/gate/source/ambe/gps/energytype UserSpectrum
+/gate/source/ambe/gps/setSpectrumFile AmBeSpectrum.txt
+/gate/source/ambe/gps/type Plane
+/gate/source/ambe/gps/shape Circle
+/gate/source/ambe/gps/radius 0.5 mm
+/gate/source/ambe/gps/angtype iso
+/gate/source/ambe/gps/mintheta 179  deg
+/gate/source/ambe/gps/maxtheta  181 deg
+/gate/source/ambe/gps/centre 0. 0. 0. mm
+

@@ -1,0 +1,10 @@
+Process Counts
+protonInelastic 46729231
+nCapture 925828
+Compton 1699349
+eBremsstrahlung 462835
+hadElastic 20658387
+Annihilation 1997061
+eIonisation 140965
+RadioactiveDecay 4442513
+dInelastic 13907

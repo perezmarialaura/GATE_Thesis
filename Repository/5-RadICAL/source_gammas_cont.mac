@@ -1,0 +1,208 @@
+/gate/source/addSource g1
+/gate/source/verbose 0
+/gate/source/g1/gps/particle gamma
+/gate/source/g1/setActivity 110000. Bq
+/gate/source/g1/gps/energytype UserSpectrum
+/gate/source/g1/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g1/gps/shape Cylinder
+/gate/source/g1/gps/radius 10 mm
+/gate/source/g1/gps/halfz 5 mm
+/gate/source/g1/gps/angtype iso
+/gate/source/g1/gps/mintheta 45  deg
+/gate/source/g1/gps/maxtheta  105 deg
+/gate/source/g1/gps/minphi 130  deg
+/gate/source/g1/gps/maxphi  250 deg
+/gate/source/g1/gps/centre 0. 0. -95 mm
+#/gate/source/g1/setIntensity 1
+
+/gate/source/addSource g2
+/gate/source/verbose 0
+/gate/source/g2/gps/particle gamma
+/gate/source/g2/setActivity 113000. Bq
+/gate/source/g2/gps/energytype UserSpectrum
+/gate/source/g2/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g2/gps/shape Cylinder
+/gate/source/g2/gps/radius 10 mm
+/gate/source/g2/gps/halfz 2.5 mm
+/gate/source/g2/gps/angtype iso
+/gate/source/g2/gps/mintheta 45  deg
+/gate/source/g2/gps/maxtheta  105 deg
+/gate/source/g2/gps/minphi 130  deg
+/gate/source/g2/gps/maxphi  250 deg
+/gate/source/g2/gps/centre 0. 0. -87.5 mm
+
+/gate/source/addSource g3
+/gate/source/verbose 0
+/gate/source/g3/gps/particle gamma
+/gate/source/g3/setActivity 115000. Bq
+/gate/source/g3/gps/energytype UserSpectrum
+/gate/source/g3/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g3/gps/shape Cylinder
+/gate/source/g3/gps/radius 10 mm
+/gate/source/g3/gps/halfz 5 mm
+/gate/source/g3/gps/angtype iso
+/gate/source/g3/gps/mintheta 45  deg
+/gate/source/g3/gps/maxtheta  105 deg
+/gate/source/g3/gps/minphi 130  deg
+/gate/source/g3/gps/maxphi  250 deg
+/gate/source/g3/gps/centre 0. 0. -80 mm
+
+/gate/source/addSource g4
+/gate/source/verbose 0
+/gate/source/g4/gps/particle gamma
+/gate/source/g4/setActivity 120000. Bq
+/gate/source/g4/gps/energytype UserSpectrum
+/gate/source/g4/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g4/gps/shape Cylinder
+/gate/source/g4/gps/radius 10 mm
+/gate/source/g4/gps/halfz 5. mm
+/gate/source/g4/gps/angtype iso
+/gate/source/g4/gps/mintheta 45  deg
+/gate/source/g4/gps/maxtheta  105 deg
+/gate/source/g4/gps/minphi 130  deg
+/gate/source/g4/gps/maxphi  250 deg
+/gate/source/g4/gps/centre 0. 0. -70. mm
+
+/gate/source/addSource g6
+/gate/source/verbose 0
+/gate/source/g6/gps/particle gamma
+/gate/source/g6/setActivity 124000. Bq
+/gate/source/g6/gps/energytype UserSpectrum
+/gate/source/g6/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g6/gps/shape Cylinder
+/gate/source/g6/gps/radius 10 mm
+/gate/source/g6/gps/halfz 2.5 mm
+/gate/source/g6/gps/angtype iso
+/gate/source/g6/gps/mintheta 45  deg
+/gate/source/g6/gps/maxtheta  105 deg
+/gate/source/g6/gps/minphi 130  deg
+/gate/source/g6/gps/maxphi  250 deg
+/gate/source/g6/gps/centre 0. 0. -62.5 mm
+
+/gate/source/addSource g7
+/gate/source/verbose 0
+/gate/source/g7/gps/particle gamma
+/gate/source/g7/setActivity 128000. Bq
+/gate/source/g7/gps/energytype UserSpectrum
+/gate/source/g7/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g7/gps/shape Cylinder
+/gate/source/g7/gps/radius 10 mm
+/gate/source/g7/gps/halfz 2.5 mm
+/gate/source/g7/gps/angtype iso
+/gate/source/g7/gps/mintheta 45  deg
+/gate/source/g7/gps/maxtheta  105 deg
+/gate/source/g7/gps/minphi 130  deg
+/gate/source/g7/gps/maxphi  250 deg
+/gate/source/g7/gps/centre 0. 0. -57.5 mm
+
+/gate/source/addSource g8
+/gate/source/verbose 0
+/gate/source/g8/gps/particle gamma
+/gate/source/g8/setActivity 132000. Bq
+/gate/source/g8/gps/energytype UserSpectrum
+/gate/source/g8/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g8/gps/shape Cylinder
+/gate/source/g8/gps/radius 10 mm
+/gate/source/g8/gps/halfz 2.5 mm
+/gate/source/g8/gps/angtype iso
+/gate/source/g8/gps/mintheta 45  deg
+/gate/source/g8/gps/maxtheta  105 deg
+/gate/source/g8/gps/minphi 130  deg
+/gate/source/g8/gps/maxphi  250 deg
+/gate/source/g8/gps/centre 0. 0. -52.5 mm
+
+/gate/source/addSource g9
+/gate/source/verbose 0
+/gate/source/g9/gps/particle gamma
+/gate/source/g9/setActivity 140000. Bq
+/gate/source/g9/gps/energytype UserSpectrum
+/gate/source/g9/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g9/gps/shape Cylinder
+/gate/source/g9/gps/radius 10 mm
+/gate/source/g9/gps/halfz 2.5 mm
+/gate/source/g9/gps/angtype iso
+/gate/source/g9/gps/mintheta 45  deg
+/gate/source/g9/gps/maxtheta  105 deg
+/gate/source/g9/gps/minphi 130  deg
+/gate/source/g9/gps/maxphi  250 deg
+/gate/source/g9/gps/centre 0. 0. -47.5 mm
+
+/gate/source/addSource g10
+/gate/source/verbose 0
+/gate/source/g10/gps/particle gamma
+/gate/source/g10/setActivity 150000. Bq
+/gate/source/g10/gps/energytype UserSpectrum
+/gate/source/g10/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g10/gps/shape Cylinder
+/gate/source/g10/gps/radius 10 mm
+/gate/source/g10/gps/halfz 2.5 mm
+/gate/source/g10/gps/angtype iso
+/gate/source/g10/gps/mintheta 45  deg
+/gate/source/g10/gps/maxtheta  105 deg
+/gate/source/g10/gps/minphi 130  deg
+/gate/source/g10/gps/maxphi  250 deg
+/gate/source/g10/gps/centre 0. 0. -42.5 mm
+
+/gate/source/addSource g11
+/gate/source/verbose 0
+/gate/source/g11/gps/particle gamma
+/gate/source/g11/setActivity 160000. Bq
+/gate/source/g11/gps/energytype UserSpectrum
+/gate/source/g11/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g11/gps/shape Cylinder
+/gate/source/g11/gps/radius 10 mm
+/gate/source/g11/gps/halfz 2.5 mm
+/gate/source/g11/gps/angtype iso
+/gate/source/g11/gps/mintheta 45  deg
+/gate/source/g11/gps/maxtheta  105 deg
+/gate/source/g11/gps/minphi 130  deg
+/gate/source/g11/gps/maxphi  250 deg
+/gate/source/g11/gps/centre 0. 0. -37.5 mm
+
+/gate/source/addSource g12
+/gate/source/verbose 0
+/gate/source/g12/gps/particle gamma
+/gate/source/g12/setActivity 170000. Bq
+/gate/source/g12/gps/energytype UserSpectrum
+/gate/source/g12/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g12/gps/shape Cylinder
+/gate/source/g12/gps/radius 10 mm
+/gate/source/g12/gps/halfz 2.5 mm
+/gate/source/g12/gps/angtype iso
+/gate/source/g12/gps/mintheta 45  deg
+/gate/source/g12/gps/maxtheta  105 deg
+/gate/source/g12/gps/minphi 130  deg
+/gate/source/g12/gps/maxphi  250 deg
+/gate/source/g12/gps/centre 0. 0. -32.5 mm
+
+/gate/source/addSource g13
+/gate/source/verbose 0
+/gate/source/g13/gps/particle gamma
+/gate/source/g13/setActivity 130000. Bq
+/gate/source/g13/gps/energytype UserSpectrum
+/gate/source/g13/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g13/gps/shape Cylinder
+/gate/source/g13/gps/radius 10 mm
+/gate/source/g13/gps/halfz 2.5 mm
+/gate/source/g13/gps/angtype iso
+/gate/source/g13/gps/mintheta 45  deg
+/gate/source/g13/gps/maxtheta  105 deg
+/gate/source/g13/gps/minphi 130  deg
+/gate/source/g13/gps/maxphi  250 deg
+/gate/source/g13/gps/centre 0. 0. -27.5 mm
+
+/gate/source/addSource g14
+/gate/source/verbose 0
+/gate/source/g14/gps/particle gamma
+/gate/source/g14/setActivity 15000. Bq
+/gate/source/g14/gps/energytype UserSpectrum
+/gate/source/g14/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/g14/gps/shape Cylinder
+/gate/source/g14/gps/radius 10 mm
+/gate/source/g14/gps/halfz 2.5 mm
+/gate/source/g14/gps/angtype iso
+/gate/source/g14/gps/mintheta 45  deg
+/gate/source/g14/gps/maxtheta  105 deg
+/gate/source/g14/gps/minphi 130  deg
+/gate/source/g14/gps/maxphi  250 deg
+/gate/source/g14/gps/centre 0. 0. -22.5 mm

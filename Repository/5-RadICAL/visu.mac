@@ -1,0 +1,18 @@
+/vis/open OGLS 800x550+0+0
+/vis/viewer/set/autoRefresh false
+/vis/verbose 0
+/vis/viewer/set/viewpointThetaPhi 30 70
+/vis/viewer/zoom 1
+/vis/drawVolume
+/vis/viewer/flush
+/tracking/storeTrajectory             1
+/vis/scene/add/trajectories
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/scene/add/hits
+#/vis/filtering/trajectories/create/particleFilter
+#/vis/filtering/trajectories/particleFilter-0/add e-
+#/vis/filtering/trajectories/particleFilter-0/invert true
+/vis/scene/endOfEventAction           accumulate 10
+/vis/scene/add/axes            20 0 15 5 cm
+/vis/viewer/set/autoRefresh true
+/vis/viewer/flush

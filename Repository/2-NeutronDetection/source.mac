@@ -1,0 +1,13 @@
+/gate/source/addSource neutrongun
+/gate/source/verbose 0
+/gate/source/neutrongun/gps/particle neutron
+/gate/source/neutrongun/gps/energytype Mono
+/gate/source/neutrongun/gps/monoenergy 100. eV
+/gate/source/neutrongun/gps/type Plane
+/gate/source/neutrongun/gps/shape Circle
+/gate/source/neutrongun/gps/radius 0.5 mm
+/gate/source/neutrongun/gps/angtype iso
+/gate/source/neutrongun/gps/mintheta 179  deg
+/gate/source/neutrongun/gps/maxtheta  181 deg
+/gate/source/neutrongun/gps/centre 0. 0. 0. mm
+

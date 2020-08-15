@@ -1,0 +1,10 @@
+/gate/world/daughters/name medium
+/gate/world/daughters/insert box
+/gate/medium/placement/setTranslation 0. 0. 20. cm
+/gate/medium/geometry/setXLength 60. cm
+/gate/medium/geometry/setYLength 60. cm
+/gate/medium/geometry/setZLength 60. cm
+/gate/medium/setMaterial Water
+/gate/medium/vis/forceWireframe
+/gate/medium/vis/setColor cyan
+

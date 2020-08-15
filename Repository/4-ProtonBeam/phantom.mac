@@ -1,0 +1,22 @@
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert box
+/gate/scanner/placement/setTranslation 0. 0. 90 cm
+/gate/scanner/geometry/setXLength 20. cm
+/gate/scanner/geometry/setYLength 20. cm
+/gate/scanner/geometry/setZLength 20. cm
+/gate/scanner/setMaterial Air
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor white
+
+/gate/scanner/daughters/name phantom
+/gate/scanner/daughters/insert box
+/gate/phantom/geometry/setXLength 20. cm
+/gate/phantom/geometry/setYLength 20. cm
+/gate/phantom/geometry/setZLength  20. cm
+/gate/phantom/setMaterial Body
+/gate/phantom/vis/forceWireframe
+/gate/phantom/vis/setColor white
+
+/gate/systems/scanner/level1/attach phantom
+
+/gate/phantom/attachCrystalSD

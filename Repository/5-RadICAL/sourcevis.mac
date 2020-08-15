@@ -1,0 +1,13 @@
+/gate/world/daughters/name sourceCont
+/gate/world/daughters/insert cylinder
+/gate/sourceCont/placement/setTranslation 0. 0. -62.5 mm
+/gate/sourceCont/geometry/setRmin 0. mm
+/gate/sourceCont/geometry/setRmax 10. mm
+/gate/sourceCont/geometry/setHeight 5. mm
+/gate/sourceCont/setMaterial Air
+/gate/sourceCont/vis/forceWireframe
+/gate/sourceCont/vis/setColor blue
+
+/gate/sourceCont/repeaters/insert linear
+/gate/sourceCont/linear/setRepeatNumber 14
+/gate/sourceCont/linear/setRepeatVector 0. 0. 5. mm

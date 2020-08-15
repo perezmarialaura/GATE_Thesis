@@ -1,0 +1,104 @@
+############################
+# VISUALIZATION PARAMETERS #
+############################
+#/control/execute visu.mac
+/vis/disable
+
+#########################
+# SET MATERIAL DATABASE #
+#########################
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#########
+# WORLD #
+#########
+/gate/world/geometry/setXLength 100. cm
+/gate/world/geometry/setYLength 100. cm
+/gate/world/geometry/setZLength 100. cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible false
+
+#######################################
+# GEOMETRY                            #
+#######################################
+
+/control/execute detector.mac
+/gate/CTscanner/moves/insert         rotation
+/gate/CTscanner/rotation/setSpeed    0.5 deg/s
+/gate/CTscanner/rotation/setAxis     0 1 0
+/control/execute medium.mac
+
+#/control/execute sourcevis.mac
+
+###########
+# PHYSICS #
+###########
+/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
+
+/gate/physics/Gamma/SetCutInRegion      medium 3 mm
+/gate/physics/Electron/SetCutInRegion   medium 3 mm
+/gate/physics/Positron/SetCutInRegion   medium 3 mm
+
+/gate/physics/Gamma/SetCutInRegion      CTscanner 0.01 cm
+/gate/physics/Electron/SetCutInRegion   CTscanner 0.01 cm
+/gate/physics/Positron/SetCutInRegion   CTscanner 0.01 cm
+
+/gate/physics/displayCuts
+
+#############
+# DIGITIZER #
+#############
+/control/execute digitizer.mac
+
+############################
+# ACTORS                   #
+############################
+#/gate/actor/addActor PhaseSpaceActor PhaseSpaceIn
+#/gate/actor/PhaseSpaceIn/attachTo medium
+#/gate/actor/PhaseSpaceIn/useVolumeFrame true
+#/gate/actor/PhaseSpaceIn/save ./output/PhaseSpaceIn.root
+
+#############
+# VERBOSITY #
+#############
+/control/execute verbose.mac
+
+##################
+# INITIALIZATION #
+##################
+/gate/run/initialize
+
+##############
+# SOURCE GPS #
+##############
+/control/execute source_neutrons_cont.mac
+#/control/execute MoveVisu.mac
+
+##########
+# OUTPUT #
+##########
+/gate/output/root/enable
+/gate/output/root/setFileName ./output/S3B_Neutrons_I
+/gate/output/root/setRootHitFlag            1
+/gate/output/root/setRootSinglesFlag        1
+/gate/output/root/setRootNtupleFlag         0
+
+##########
+# RANDOM #
+##########
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+###############
+# ACQUISITION #
+###############
+#/gate/application/setTotalNumberOfPrimaries 30
+
+/gate/application/setTimeSlice      0.5 s
+/gate/application/setTimeStart      0. s
+/gate/application/setTimeStop      360.  s
+
+
+/gate/application/startDAQ
+
+exit

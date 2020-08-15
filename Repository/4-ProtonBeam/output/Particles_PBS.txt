@@ -1,0 +1,13 @@
+Particle Counts
+neutron 3603261
+gamma 21717348
+electron 7715982
+positron 1013242
+neutrino 883211
+antineutrino 331299
+alpha 3603080
+deuteron 1000260
+triton 74753
+O16 15803459
+proton 20640472
+others 7571356

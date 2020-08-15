@@ -1,0 +1,16 @@
+/gate/source/addSource gammapoint
+/gate/source/verbose 0
+/gate/source/gammapoint/gps/particle gamma
+/gate/source/gammapoint/setActivity 1. MBq
+/gate/source/gammapoint/gps/energytype UserSpectrum
+/gate/source/gammapoint/gps/setSpectrumFile PBSGammaSpectrum.txt
+/gate/source/gammapoint/gps/type Plane
+/gate/source/gammapoint/gps/shape Circle
+/gate/source/gammapoint/gps/radius 0.5 mm
+/gate/source/gammapoint/gps/angtype iso
+/gate/source/gammapoint/gps/mintheta 45  deg
+/gate/source/gammapoint/gps/maxtheta  105 deg
+/gate/source/gammapoint/gps/minphi 130  deg
+/gate/source/gammapoint/gps/maxphi  250 deg
+/gate/source/gammapoint/gps/centre 0. 0. -2.4 cm
+#/gate/source/gammapoint/setIntensity 5

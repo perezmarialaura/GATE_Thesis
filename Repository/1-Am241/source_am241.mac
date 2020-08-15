@@ -1,0 +1,15 @@
+/gate/source/addSource americium
+/gate/source/verbose 0
+#/gate/source/americium/setActivity 30. kBq
+/gate/source/americium/gps/verbose 0
+/gate/source/americium/gps/particle gamma
+/gate/source/americium/gps/energytype UserSpectrum
+/gate/source/americium/gps/setSpectrumFile Am241Spectrum.txt
+/gate/source/americium/gps/type Plane
+/gate/source/americium/gps/shape Circle
+/gate/source/americium/gps/radius 0.5 mm
+/gate/source/americium/gps/angtype iso
+/gate/source/americium/gps/mintheta 179  deg
+/gate/source/americium/gps/maxtheta  181 deg
+/gate/source/americium/gps/centre 0. 0. 0. mm
+

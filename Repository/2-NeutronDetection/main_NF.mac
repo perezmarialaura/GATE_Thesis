@@ -1,0 +1,107 @@
+#########################
+# SET MATERIAL DATABASE #
+#########################
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#########
+# WORLD #
+#########
+/gate/world/geometry/setXLength 120. cm
+/gate/world/geometry/setYLength 120. cm
+/gate/world/geometry/setZLength 120. cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible false
+
+#######################################
+# GEOMETRY                            #
+#######################################
+
+/control/execute detector.mac
+
+
+###########
+# PHYSICS #
+###########
+/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
+
+/gate/physics/Gamma/SetCutInRegion      world 1 mm
+/gate/physics/Electron/SetCutInRegion   world 1 mm
+/gate/physics/Positron/SetCutInRegion   world 1 mm
+
+/gate/physics/Gamma/SetCutInRegion      CTscanner 0.01 cm
+/gate/physics/Electron/SetCutInRegion   CTscanner 0.01 cm
+/gate/physics/Positron/SetCutInRegion   CTscanner 0.01 cm
+
+/gate/physics/displayCuts
+
+#############
+# DIGITIZER #
+#############
+/control/execute digitizer.mac
+
+##########
+# ACTORS #
+##########
+/gate/actor/addActor PhaseSpaceActor PhaseSpaceDetector
+/gate/actor/PhaseSpaceDetector/enableEkine              true
+/gate/actor/PhaseSpaceDetector/enableXPosition          false
+/gate/actor/PhaseSpaceDetector/enableYPosition          false
+/gate/actor/PhaseSpaceDetector/enableZPosition          false
+/gate/actor/PhaseSpaceDetector/enableXDirection         false
+/gate/actor/PhaseSpaceDetector/enableYDirection         false
+/gate/actor/PhaseSpaceDetector/enableZDirection         false
+/gate/actor/PhaseSpaceDetector/enableProductionVolume   false
+/gate/actor/PhaseSpaceDetector/enableProductionProcess  true
+/gate/actor/PhaseSpaceDetector/enableParticleName       true
+/gate/actor/PhaseSpaceDetector/enableWeight             false
+/gate/actor/PhaseSpaceDetector/attachTo module
+/gate/actor/PhaseSpaceDetector/storeSecondaries true
+/gate/actor/PhaseSpaceDetector/useVolumeFrame true
+/gate/actor/PhaseSpaceDetector/save ./output/PhaseSpaceDetector_100eV_NF.root
+
+#############
+# VERBOSITY #
+#############
+/control/execute verbose.mac
+
+##################
+# INITIALIZATION #
+##################
+/gate/run/initialize
+
+##############
+# SOURCE GPS #
+##############
+/control/execute source.mac
+
+############################
+# VISUALIZATION PARAMETERS #
+############################
+#/control/execute visu.mac
+#/gate/source/neutrongun/visualize 10 yellow 3
+/vis/disable
+
+##########
+# OUTPUT #
+##########
+/gate/output/root/disable
+
+
+##########
+# RANDOM #
+##########
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+###############
+# ACQUISITION #
+###############
+#/gate/application/setTimeSlice  1 s
+#/gate/application/setTimeStart   0 s
+#/gate/application/setTimeStop    5 s
+/gate/application/setTotalNumberOfPrimaries 50000000
+/gate/application/startDAQ
+
+
+exit
+

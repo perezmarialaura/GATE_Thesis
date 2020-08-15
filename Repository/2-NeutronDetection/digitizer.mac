@@ -1,0 +1,24 @@
+# ADDER AND READOUT
+/gate/digitizer/Singles/insert adder
+/gate/digitizer/Singles/insert readout
+/gate/digitizer/Singles/readout/setDepth 3
+
+# ENERGY RESOLUTION
+/gate/digitizer/Singles/insert blurring
+/gate/digitizer/Singles/blurring/setLaw inverseSquare
+/gate/digitizer/Singles/blurring/inverseSquare/setResolution 0.013
+/gate/digitizer/Singles/blurring/inverseSquare/setEnergyOfReference 60. keV
+
+# THRESHOLD AND UPHOLD
+/gate/digitizer/Singles/insert thresholder
+/gate/digitizer/Singles/thresholder/setThreshold 5 keV
+/gate/digitizer/Singles/insert upholder
+/gate/digitizer/Singles/upholder/setUphold 600. keV
+
+# VERBOSE
+/gate/digitizer/convertor/verbose 0
+/gate/digitizer/verbose 0
+
+# VRT
+/gate/output/imageCT/vrtFactor 5
+

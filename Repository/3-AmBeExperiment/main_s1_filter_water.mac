@@ -1,0 +1,99 @@
+#########################
+# SET MATERIAL DATABASE #
+#########################
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#########
+# WORLD #
+#########
+/gate/world/geometry/setXLength 120. cm
+/gate/world/geometry/setYLength 120. cm
+/gate/world/geometry/setZLength 120. cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible false
+
+#######################################
+# GEOMETRY                            #
+#######################################
+
+/control/execute detector.mac
+/control/execute filter.mac
+/control/execute medium.mac
+
+
+###########
+# PHYSICS #
+###########
+/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
+
+/gate/physics/Gamma/SetCutInRegion      medium 3 mm
+/gate/physics/Electron/SetCutInRegion   medium 3 mm
+/gate/physics/Positron/SetCutInRegion   medium 3 mm
+
+/gate/physics/Gamma/SetCutInRegion      CTscanner 0.01 cm
+/gate/physics/Electron/SetCutInRegion   CTscanner 0.01 cm
+/gate/physics/Positron/SetCutInRegion   CTscanner 0.01 cm
+
+/gate/physics/displayCuts
+
+#############
+# DIGITIZER #
+#############
+/control/execute digitizer.mac
+
+############################
+# ACTORS                   #
+############################
+/gate/actor/addActor  SecondaryProductionActor     ProdActor
+/gate/actor/ProdActor/save                      output/SecProduction_Water.txt
+/gate/actor/ProdActor/attachTo                     filter
+
+#############
+# VERBOSITY #
+#############
+/control/execute verbose.mac
+
+##################
+# INITIALIZATION #
+##################
+/gate/run/initialize
+
+##############
+# SOURCE GPS #
+##############
+/control/execute source_s1.mac
+
+############################
+# VISUALIZATION PARAMETERS #
+############################
+#/control/execute visu.mac
+#/gate/source/ambe/visualize 10 yellow 3
+/vis/disable
+
+##########
+# OUTPUT #
+##########
+/gate/output/root/enable
+/gate/output/root/setFileName ./output/S1_Filter_Water
+/gate/output/root/setRootHitFlag            1
+/gate/output/root/setRootSinglesFlag        1
+/gate/output/root/setRootNtupleFlag         0
+
+##########
+# RANDOM #
+##########
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+###############
+# ACQUISITION #
+###############
+#/gate/application/setTimeSlice  1 s
+#/gate/application/setTimeStart   0 s
+#/gate/application/setTimeStop    5 s
+/gate/application/setTotalNumberOfPrimaries 1250000000
+/gate/application/startDAQ
+
+
+exit
+

@@ -1,0 +1,10 @@
+/vis/open OGLS 800x550+0+0
+/vis/viewer/set/viewpointThetaPhi 70 30
+/vis/drawVolume
+/vis/viewer/flush
+/tracking/storeTrajectory             1
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction           accumulate 10
+
+/vis/scene/add/axes            0 0 0 50 mm
+#/vis/viewer/set/auxiliaryEdge true

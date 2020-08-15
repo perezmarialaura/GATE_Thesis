@@ -1,0 +1,12 @@
+/vis/open OGLS
+/vis/ogl/set/displayListLimit
+/vis/viewer/set/viewpointThetaPhi 60 30
+/vis/drawVolume
+/vis/viewer/flush
+/tracking/storeTrajectory             1
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction           accumulate 10
+
+/gate/source/americium/visualize 10 yellow 3
+/vis/scene/add/axes            0 0 0 50 mm
+#/vis/viewer/set/auxiliaryEdge true

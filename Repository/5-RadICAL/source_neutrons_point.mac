@@ -1,0 +1,16 @@
+/gate/source/addSource neutronpoint
+/gate/source/verbose 0
+/gate/source/neutronpoint/gps/particle neutron
+/gate/source/neutronpoint/setActivity 20. MBq
+/gate/source/neutronpoint/gps/energytype UserSpectrum
+/gate/source/neutronpoint/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/neutronpoint/gps/type Plane
+/gate/source/neutronpoint/gps/shape Circle
+/gate/source/neutronpoint/gps/radius 0.5 mm
+/gate/source/neutronpoint/gps/angtype iso
+/gate/source/neutronpoint/gps/mintheta 45  deg
+/gate/source/neutronpoint/gps/maxtheta  105 deg
+/gate/source/neutronpoint/gps/minphi 130  deg
+/gate/source/neutronpoint/gps/maxphi  250 deg
+/gate/source/neutronpoint/gps/centre 0. 0. -7.5 cm
+/gate/source/neutronpoint/setIntensity 1

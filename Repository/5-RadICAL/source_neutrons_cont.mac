@@ -1,0 +1,224 @@
+/gate/source/addSource n1
+/gate/source/verbose 0
+/gate/source/n1/gps/particle neutron
+/gate/source/n1/setActivity 1750000. Bq
+/gate/source/n1/gps/energytype UserSpectrum
+/gate/source/n1/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n1/gps/shape Cylinder
+/gate/source/n1/gps/radius 10 mm
+/gate/source/n1/gps/halfz 5 mm
+/gate/source/n1/gps/angtype iso
+/gate/source/n1/gps/mintheta 45  deg
+/gate/source/n1/gps/maxtheta  105 deg
+/gate/source/n1/gps/minphi 130  deg
+/gate/source/n1/gps/maxphi  250 deg
+/gate/source/n1/gps/centre 0. 0. -95 mm
+#/gate/source/n1/setIntensity 1
+
+/gate/source/addSource n2
+/gate/source/verbose 0
+/gate/source/n2/gps/particle neutron
+/gate/source/n2/setActivity 1730000. Bq
+/gate/source/n2/gps/energytype UserSpectrum
+/gate/source/n2/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n2/gps/shape Cylinder
+/gate/source/n2/gps/radius 10 mm
+/gate/source/n2/gps/halfz 2.5 mm
+/gate/source/n2/gps/angtype iso
+/gate/source/n2/gps/mintheta 45  deg
+/gate/source/n2/gps/maxtheta  105 deg
+/gate/source/n2/gps/minphi 130  deg
+/gate/source/n2/gps/maxphi  250 deg
+/gate/source/n2/gps/centre 0. 0. -87.5 mm
+
+/gate/source/addSource n3
+/gate/source/verbose 0
+/gate/source/n3/gps/particle neutron
+/gate/source/n3/setActivity 1700000. Bq
+/gate/source/n3/gps/energytype UserSpectrum
+/gate/source/n3/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n3/gps/shape Cylinder
+/gate/source/n3/gps/radius 10 mm
+/gate/source/n3/gps/halfz 5 mm
+/gate/source/n3/gps/angtype iso
+/gate/source/n3/gps/mintheta 45  deg
+/gate/source/n3/gps/maxtheta  105 deg
+/gate/source/n3/gps/minphi 130  deg
+/gate/source/n3/gps/maxphi  250 deg
+/gate/source/n3/gps/centre 0. 0. -80 mm
+
+/gate/source/addSource n4
+/gate/source/verbose 0
+/gate/source/n4/gps/particle neutron
+/gate/source/n4/setActivity 1650000. Bq
+/gate/source/n4/gps/energytype UserSpectrum
+/gate/source/n4/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n4/gps/shape Cylinder
+/gate/source/n4/gps/radius 10 mm
+/gate/source/n4/gps/halfz 2.5 mm
+/gate/source/n4/gps/angtype iso
+/gate/source/n4/gps/mintheta 45  deg
+/gate/source/n4/gps/maxtheta  105 deg
+/gate/source/n4/gps/minphi 130  deg
+/gate/source/n4/gps/maxphi  250 deg
+/gate/source/n4/gps/centre 0. 0. -72.5 mm
+
+/gate/source/addSource n5
+/gate/source/verbose 0
+/gate/source/n5/gps/particle neutron
+/gate/source/n5/setActivity 1600000. Bq
+/gate/source/n5/gps/energytype UserSpectrum
+/gate/source/n5/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n5/gps/shape Cylinder
+/gate/source/n5/gps/radius 10 mm
+/gate/source/n5/gps/halfz 2.5 mm
+/gate/source/n5/gps/angtype iso
+/gate/source/n5/gps/mintheta 45  deg
+/gate/source/n5/gps/maxtheta  105 deg
+/gate/source/n5/gps/minphi 130  deg
+/gate/source/n5/gps/maxphi  250 deg
+/gate/source/n5/gps/centre 0. 0. -67.5 mm
+
+/gate/source/addSource n6
+/gate/source/verbose 0
+/gate/source/n6/gps/particle neutron
+/gate/source/n6/setActivity 1500000. Bq
+/gate/source/n6/gps/energytype UserSpectrum
+/gate/source/n6/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n6/gps/shape Cylinder
+/gate/source/n6/gps/radius 10 mm
+/gate/source/n6/gps/halfz 2.5 mm
+/gate/source/n6/gps/angtype iso
+/gate/source/n6/gps/mintheta 45  deg
+/gate/source/n6/gps/maxtheta  105 deg
+/gate/source/n6/gps/minphi 130  deg
+/gate/source/n6/gps/maxphi  250 deg
+/gate/source/n6/gps/centre 0. 0. -62.5 mm
+
+/gate/source/addSource n7
+/gate/source/verbose 0
+/gate/source/n7/gps/particle neutron
+/gate/source/n7/setActivity 1450000. Bq
+/gate/source/n7/gps/energytype UserSpectrum
+/gate/source/n7/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n7/gps/shape Cylinder
+/gate/source/n7/gps/radius 10 mm
+/gate/source/n7/gps/halfz 2.5 mm
+/gate/source/n7/gps/angtype iso
+/gate/source/n7/gps/mintheta 45  deg
+/gate/source/n7/gps/maxtheta  105 deg
+/gate/source/n7/gps/minphi 130  deg
+/gate/source/n7/gps/maxphi  250 deg
+/gate/source/n7/gps/centre 0. 0. -57.5 mm
+
+/gate/source/addSource n8
+/gate/source/verbose 0
+/gate/source/n8/gps/particle neutron
+/gate/source/n8/setActivity 1370000. Bq
+/gate/source/n8/gps/energytype UserSpectrum
+/gate/source/n8/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n8/gps/shape Cylinder
+/gate/source/n8/gps/radius 10 mm
+/gate/source/n8/gps/halfz 2.5 mm
+/gate/source/n8/gps/angtype iso
+/gate/source/n8/gps/mintheta 45  deg
+/gate/source/n8/gps/maxtheta  105 deg
+/gate/source/n8/gps/minphi 130  deg
+/gate/source/n8/gps/maxphi  250 deg
+/gate/source/n8/gps/centre 0. 0. -52.5 mm
+
+/gate/source/addSource n9
+/gate/source/verbose 0
+/gate/source/n9/gps/particle neutron
+/gate/source/n9/setActivity 1300000. Bq
+/gate/source/n9/gps/energytype UserSpectrum
+/gate/source/n9/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n9/gps/shape Cylinder
+/gate/source/n9/gps/radius 10 mm
+/gate/source/n9/gps/halfz 2.5 mm
+/gate/source/n9/gps/angtype iso
+/gate/source/n9/gps/mintheta 45  deg
+/gate/source/n9/gps/maxtheta  105 deg
+/gate/source/n9/gps/minphi 130  deg
+/gate/source/n9/gps/maxphi  250 deg
+/gate/source/n9/gps/centre 0. 0. -47.5 mm
+
+/gate/source/addSource n10
+/gate/source/verbose 0
+/gate/source/n10/gps/particle neutron
+/gate/source/n10/setActivity 1200000. Bq
+/gate/source/n10/gps/energytype UserSpectrum
+/gate/source/n10/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n10/gps/shape Cylinder
+/gate/source/n10/gps/radius 10 mm
+/gate/source/n10/gps/halfz 2.5 mm
+/gate/source/n10/gps/angtype iso
+/gate/source/n10/gps/mintheta 45  deg
+/gate/source/n10/gps/maxtheta  105 deg
+/gate/source/n10/gps/minphi 130  deg
+/gate/source/n10/gps/maxphi  250 deg
+/gate/source/n10/gps/centre 0. 0. -42.5 mm
+
+/gate/source/addSource n11
+/gate/source/verbose 0
+/gate/source/n11/gps/particle neutron
+/gate/source/n11/setActivity 1000000. Bq
+/gate/source/n11/gps/energytype UserSpectrum
+/gate/source/n11/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n11/gps/shape Cylinder
+/gate/source/n11/gps/radius 10 mm
+/gate/source/n11/gps/halfz 2.5 mm
+/gate/source/n11/gps/angtype iso
+/gate/source/n11/gps/mintheta 45  deg
+/gate/source/n11/gps/maxtheta  105 deg
+/gate/source/n11/gps/minphi 130  deg
+/gate/source/n11/gps/maxphi  250 deg
+/gate/source/n11/gps/centre 0. 0. -37.5 mm
+
+/gate/source/addSource n12
+/gate/source/verbose 0
+/gate/source/n12/gps/particle neutron
+/gate/source/n12/setActivity 700000. Bq
+/gate/source/n12/gps/energytype UserSpectrum
+/gate/source/n12/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n12/gps/shape Cylinder
+/gate/source/n12/gps/radius 10 mm
+/gate/source/n12/gps/halfz 2.5 mm
+/gate/source/n12/gps/angtype iso
+/gate/source/n12/gps/mintheta 45  deg
+/gate/source/n12/gps/maxtheta  105 deg
+/gate/source/n12/gps/minphi 130  deg
+/gate/source/n12/gps/maxphi  250 deg
+/gate/source/n12/gps/centre 0. 0. -32.5 mm
+
+/gate/source/addSource n13
+/gate/source/verbose 0
+/gate/source/n13/gps/particle neutron
+/gate/source/n13/setActivity 450000. Bq
+/gate/source/n13/gps/energytype UserSpectrum
+/gate/source/n13/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n13/gps/shape Cylinder
+/gate/source/n13/gps/radius 10 mm
+/gate/source/n13/gps/halfz 2.5 mm
+/gate/source/n13/gps/angtype iso
+/gate/source/n13/gps/mintheta 45  deg
+/gate/source/n13/gps/maxtheta  105 deg
+/gate/source/n13/gps/minphi 130  deg
+/gate/source/n13/gps/maxphi  250 deg
+/gate/source/n13/gps/centre 0. 0. -27.5 mm
+
+/gate/source/addSource n14
+/gate/source/verbose 0
+/gate/source/n14/gps/particle neutron
+/gate/source/n14/setActivity 100000. Bq
+/gate/source/n14/gps/energytype UserSpectrum
+/gate/source/n14/gps/setSpectrumFile PBSNeutronSpectrum.txt
+/gate/source/n14/gps/shape Cylinder
+/gate/source/n14/gps/radius 10 mm
+/gate/source/n14/gps/halfz 2.5 mm
+/gate/source/n14/gps/angtype iso
+/gate/source/n14/gps/mintheta 45  deg
+/gate/source/n14/gps/maxtheta  105 deg
+/gate/source/n14/gps/minphi 130  deg
+/gate/source/n14/gps/maxphi  250 deg
+/gate/source/n14/gps/centre 0. 0. -22.5 mm

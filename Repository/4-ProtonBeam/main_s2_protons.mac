@@ -1,0 +1,138 @@
+#########################
+# SET MATERIAL DATABASE #
+#########################
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#############
+# VERBOSITY #
+#############
+/control/execute verbose.mac
+
+#########
+# WORLD #
+#########
+/gate/world/geometry/setXLength 50. cm
+/gate/world/geometry/setYLength 50. cm
+/gate/world/geometry/setZLength 300. cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible false
+
+#######################################
+# GEOMETRY                            #
+#######################################
+#/control/execute detector.mac
+#/control/execute digitizer.mac
+/control/execute phantom.mac
+
+###########
+# PHYSICS #
+###########
+/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
+
+/gate/physics/Gamma/SetCutInRegion      world 1 mm
+/gate/physics/Electron/SetCutInRegion   world 1 mm
+/gate/physics/Positron/SetCutInRegion   world 1 mm
+/gate/physics/Gamma/SetCutInRegion      phantom 5 mm
+/gate/physics/Electron/SetCutInRegion   phantom 5 mm
+/gate/physics/Positron/SetCutInRegion   phantom 5 mm
+
+/gate/physics/displayCuts
+
+#############
+# DIGITIZER #
+#############
+#/control/execute digitizer.mac
+
+############################
+# ACTORS                   #
+############################
+/gate/actor/addActor DoseActor             MyDoseActor
+/gate/actor/MyDoseActor/save                   output/ProtonDose.mhd
+/gate/actor/MyDoseActor/attachTo               phantom
+/gate/actor/MyDoseActor/stepHitType            random
+/gate/actor/MyDoseActor/setSize                20 20 20 cm
+/gate/actor/MyDoseActor/setResolution          200 200 200
+/gate/actor/MyDoseActor/enableEdep             true
+/gate/actor/MyDoseActor/enableUncertaintyEdep  false
+/gate/actor/MyDoseActor/enableSquaredEdep      false
+/gate/actor/MyDoseActor/enableDose             true
+/gate/actor/MyDoseActor/normaliseDoseToMax     false
+/gate/actor/MyDoseActor/addFilter                       particleFilter
+/gate/actor/MyDoseActor/particleFilter/addParticle      proton
+
+/gate/actor/addActor DoseActor             DoseNeutronActor
+/gate/actor/DoseNeutronActor/save                   output/NeutronDose.mhd
+/gate/actor/DoseNeutronActor/attachTo               phantom
+/gate/actor/DoseNeutronActor/stepHitType            random
+/gate/actor/DoseNeutronActor/setSize                20 20 20 cm
+/gate/actor/DoseNeutronActor/setResolution          200 200 200
+/gate/actor/DoseNeutronActor/enableEdep             true
+/gate/actor/DoseNeutronActor/enableUncertaintyEdep  false
+/gate/actor/DoseNeutronActor/enableSquaredEdep      false
+/gate/actor/DoseNeutronActor/enableDose             true
+/gate/actor/DoseNeutronActor/normaliseDoseToMax     false
+/gate/actor/DoseNeutronActor/addFilter                       particleFilter
+/gate/actor/DoseNeutronActor/particleFilter/addParticle      neutron
+
+/gate/actor/addActor DoseActor             DoseGammaActor
+/gate/actor/DoseGammaActor/save                   output/GammaDose.mhd
+/gate/actor/DoseGammaActor/attachTo               phantom
+/gate/actor/DoseGammaActor/stepHitType            random
+/gate/actor/DoseGammaActor/setSize                20 20 20 cm
+/gate/actor/DoseGammaActor/setResolution          200 200 200
+/gate/actor/DoseGammaActor/enableEdep             true
+/gate/actor/DoseGammaActor/enableUncertaintyEdep  false
+/gate/actor/DoseGammaActor/enableSquaredEdep      false
+/gate/actor/DoseGammaActor/enableDose             true
+/gate/actor/DoseGammaActor/normaliseDoseToMax     false
+/gate/actor/DoseGammaActor/addFilter                       particleFilter
+/gate/actor/DoseGammaActor/particleFilter/addParticle      gamma
+
+
+/gate/actor/addActor PhaseSpaceActor PhaseSpaceOut
+/gate/actor/PhaseSpaceOut/attachTo phantom
+/gate/actor/PhaseSpaceOut/storeSecondaries true
+/gate/actor/PhaseSpaceOut/useVolumeFrame true
+/gate/actor/PhaseSpaceOut/save output/PhaseSpaceSecondaries.root
+
+/gate/actor/addActor PhaseSpaceActor PhaseSpaceIn
+/gate/actor/PhaseSpaceIn/attachTo phantom
+/gate/actor/PhaseSpaceIn/useVolumeFrame true
+/gate/actor/PhaseSpaceIn/save output/PhaseSpaceProtons.root
+
+##################
+# INITIALIZATION #
+##################
+/gate/run/initialize
+
+##############
+# SOURCE GPS #
+##############
+/control/execute source_PBS.mac
+
+############################
+# VISUALIZATION PARAMETERS #
+############################
+#/control/execute visu.mac
+/vis/disable
+
+##########
+# OUTPUT #
+##########
+/gate/output/root/disable
+
+##########
+# RANDOM #
+##########
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+###############
+# ACQUISITION #
+###############
+/gate/application/setTotalNumberOfPrimaries 100000000
+/gate/application/startDAQ
+
+exit
+
+
